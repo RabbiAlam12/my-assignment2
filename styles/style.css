@@ -8,7 +8,9 @@
     background-color:  #FFFFFF;
  }
 
- /* header section start */
+ /********************
+ header section start 
+ *********************/
  .container{
      background-color: #2D25A0;
      display: flex;
@@ -26,6 +28,10 @@
      color:  #FFFFFF;
      margin-left: 154px;
      margin-right: 102px;
+ }
+ .content img:hover{
+     transform: rotate(360deg);
+     transition: 1s;
  }
 .content h1{
     width: 485px;
@@ -51,6 +57,10 @@
 .fas{
     padding-left:10px;
 }
+ /********************
+ header section End 
+ *********************/
+
 /********************
  players section start
  ********************/
@@ -73,9 +83,10 @@
     display: block;
     width: 300px;
     height: 256px;
-    margin: 15px 15px 15px 15px;
+    margin: 15px;
 }
  .card{
+     padding: 10px;
      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
  }
 
@@ -88,6 +99,52 @@
 /********************
  players section End
  ********************/
+
+ /***************************
+  Upcoming Event Section start 
+ ***************************/
+ .news-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+ }
+ .upcoming-news{
+    color: #494949;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 30px;  
+    letter-spacing: 2px;
+}
+.news-headline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    
+}
+.news .news-banner img{
+    width: 500px;
+    height: 280px;
+}
+.news-info .btn{
+    display: inline-block;
+    text-decoration:none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 10px 24px;
+    font-size: 13px;
+    background-color: #2D25A0;
+    position: relative;
+    cursor: pointer;
+}
+.news-info .btn:hover{
+    background: #E02C6D;
+    transform: 2s ;
+}
+ /***************************
+  Upcoming Event Section End
+ ************************/
+ 
 
  /************************ 
  footer section Start 
@@ -129,3 +186,45 @@
  /************************
 footer section Start 
  *************************/
+
+ /**************
+ Media queries 
+ **************/
+
+ /* Mobile Devices */
+@media only screen and (max-width:688px) {
+  .container{
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+     
+  }
+    .content{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .content h1{
+        width: auto;
+        
+    }
+    .players-cards{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+       padding: 0%;
+       display: contents;
+    }
+     .news-page{
+        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+     }
+     .news-headline{
+         width: 100%;
+         display:flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+     }
+      .logo {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
